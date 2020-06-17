@@ -1,9 +1,5 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-05-29 09:48
-# 《自然语言处理入门》2.8 HanLP 的词典分词实现
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-05-29 09:48
+# 《自然语言处理入门》2.8 HanLP的词典分词实现
 
 from pyhanlp import *
 from pyhanlp.static import HANLP_DATA_PATH
@@ -11,6 +7,7 @@ from pyhanlp.static import HANLP_DATA_PATH
 HanLP.Config.ShowTermNature = False
 segment = DoubleArrayTrieSegment()
 print(segment.seg('江西鄱阳湖干枯，中国最大淡水湖变成大草原'))
+print(segment.seg('河北大学网络空间安全与计算机学院人工智能系'))
 
 dict1 = HANLP_DATA_PATH + "/dictionary/CoreNatureDictionary.mini.txt"
 dict2 = HANLP_DATA_PATH + "/dictionary/custom/上海地名.txt ns"

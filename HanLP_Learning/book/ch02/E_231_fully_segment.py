@@ -1,10 +1,12 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-05-22 21:05
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-05-22 21:05
 # 《自然语言处理入门》2.3.1 完全切分
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
-from tests.book.ch02.utility import load_dictionary
+import sys
+import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
+
+from E_222_utility import load_dictionary
 
 
 def fully_segment(text, dic):

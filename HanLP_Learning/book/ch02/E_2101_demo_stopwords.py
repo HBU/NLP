@@ -1,13 +1,7 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-04 11:17
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-04 11:17
 # 《自然语言处理入门》2.10.1 停用词过滤
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
 from jpype import JString
-
 from pyhanlp import *
-
 
 def load_from_file(path):
     """
@@ -16,7 +10,7 @@ def load_from_file(path):
     :return: 双数组trie树
     """
     map = JClass('java.util.TreeMap')()  # 创建TreeMap实例
-    with open(path) as src:
+    with open(path,'r', encoding='UTF-8') as src: # 转为Unicode编码，否则报错。 2020.6.17 by David 。
         for word in src:
             word = word.strip()  # 去掉Python读入的\n
             map[word] = word

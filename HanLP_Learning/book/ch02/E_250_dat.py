@@ -1,12 +1,6 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-05-26 21:16
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-05-26 21:16
 # 《自然语言处理入门》2.5 双数组字典树
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
-
 from pyhanlp import *
-
 
 class DoubleArrayTrie(object):
     def __init__(self, dic: dict) -> None:

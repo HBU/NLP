@@ -1,15 +1,16 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-05-25 10:21
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-05-25 10:21
 # 《自然语言处理入门》2.3.5 速度评测
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
+import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 import time
 
-from tests.book.ch02.backward_segment import backward_segment
-from tests.book.ch02.bidirectional_segment import bidirectional_segment
-from tests.book.ch02.forward_segment import forward_segment
-from tests.book.ch02.utility import load_dictionary
+from E_233_backward_segment import backward_segment
+from E_234_bidirectional_segment import bidirectional_segment
+from E_232_forward_segment import forward_segment
+from E_222_utility import load_dictionary
 
 
 def evaluate_speed(segment, text, dic):

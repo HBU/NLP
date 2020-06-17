@@ -1,12 +1,13 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-02 22:53
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-02 22:53
 # 《自然语言处理入门》2.9 准确率评测
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
+import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 import re
 from pyhanlp import *
-from tests.test_utility import ensure_data
+from test_utility import ensure_data
 
 
 def to_region(segmentation: str) -> list:

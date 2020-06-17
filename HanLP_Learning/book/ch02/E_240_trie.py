@@ -1,10 +1,5 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-05-25 17:25
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-05-25 17:25
 # 《自然语言处理入门》2.4 字典树
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
-
 class Node(object):
     def __init__(self, value) -> None:
         self._children = {}
