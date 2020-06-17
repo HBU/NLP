@@ -1,0 +1,5 @@
+{
+    "python.linting.pylintArgs": [
+        "--disabled=w611,w614"
+    ]
+}
