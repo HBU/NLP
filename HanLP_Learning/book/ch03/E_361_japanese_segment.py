@@ -1,13 +1,13 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-07 18:37
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-07 18:37
 # 《自然语言处理入门》3.6.1 日语分词语料
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
 import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 
-from tests.book.ch03.ngram_segment import train_bigram, load_bigram
-from tests.test_utility import ensure_data
+from E_330_ngram_segment import train_bigram, load_bigram
+from test_utility import ensure_data
 
 jp_corpus = ensure_data('jpcorpus',
                         'http://file.hankcs.com/corpus/jpcorpus.zip')

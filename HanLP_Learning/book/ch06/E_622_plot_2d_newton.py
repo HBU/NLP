@@ -1,6 +1,4 @@
 # 《自然语言处理入门》6.2.2 条件随机场的训练
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np

@@ -1,12 +1,12 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-08 15:35
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-08 15:35
 # 3.2.2 微软亚洲研究院语料库 MSR
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
 import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 
-from tests.test_utility import ensure_data, test_data_path
+from test_utility import ensure_data, test_data_path
 
 sighan05 = ensure_data('icwb2-data', 'http://sighan.cs.uchicago.edu/bakeoff2005/data/icwb2-data.zip')
 msr_dict = os.path.join(sighan05, 'gold', 'msr_training_words.utf8')

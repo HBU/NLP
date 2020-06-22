@@ -1,12 +1,13 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-21 19:46
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-21 19:46
 # 《自然语言处理入门》5.3 基于感知机的人名性别分类
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
+import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 
 from pyhanlp import *
-from tests.test_utility import ensure_data
+from test_utility import ensure_data
 
 PerceptronNameGenderClassifier = JClass('com.hankcs.hanlp.model.perceptron.PerceptronNameGenderClassifier')
 cnname = ensure_data('cnname', 'http://file.hankcs.com/corpus/cnname.zip')
@@ -23,7 +24,7 @@ def run_classifier(averaged_perceptron):
     print('特征数量：', len(model.parameter))
     # model.save(MODEL, model.featureMap.entrySet(), 0, True)
     # classifier = PerceptronNameGenderClassifier(MODEL)
-    for name in "赵建军", "沈雁冰", "陆雪琪", "李冰冰":
+    for name in "魏勇刚", "沈雁冰", "陆雪琪", "李冰冰":
         print('%s=%s' % (name, classifier.predict(name)))
     print('测试集准确率：', classifier.evaluate(TESTING_SET))
 

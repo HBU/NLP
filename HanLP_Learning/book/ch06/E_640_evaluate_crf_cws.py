@@ -1,14 +1,15 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-07-02 14:43
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-07-02 14:43
 # 《自然语言处理入门》6.4 HanLP 中的 CRF++ API
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
-
+# David 2020.6.18 测试未通过
+import sys
+import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 from pyhanlp import *
-from tests.book.ch03 import msr
-from tests.book.ch03.eval_bigram_cws import CWSEvaluator
-from tests.book.ch06.crfpp_train_hanlp_load import CRF_MODEL_PATH, CRF_MODEL_TXT_PATH
+from book.ch03 import msr
+from book.ch03.E_351_eval_bigram_cws import CWSEvaluator
+from E_640_crfpp_train_hanlp_load import CRF_MODEL_PATH, CRF_MODEL_TXT_PATH
 
 CRFSegmenter = JClass('com.hankcs.hanlp.model.crf.CRFSegmenter')
 CRFLexicalAnalyzer = JClass('com.hankcs.hanlp.model.crf.CRFLexicalAnalyzer')

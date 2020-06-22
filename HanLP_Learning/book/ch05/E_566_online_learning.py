@@ -1,11 +1,13 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-25 13:35
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-25 13:35
 # 《自然语言处理入门》5.6.6 模型调整与在线学习
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
+import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
+
 from pyhanlp import PerceptronLexicalAnalyzer, HanLP, CustomDictionary
-from tests.book.ch03.msr import msr_model
+from book.ch03.E_322_msr import msr_model
 
 HanLP.Config.ShowTermNature = False
 segment = PerceptronLexicalAnalyzer(msr_model).enableCustomDictionary(False)

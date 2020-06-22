@@ -1,14 +1,10 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-26 16:49
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-26 16:49
 # 《自然语言处理入门》5.2.4 损失函数与随机梯度下降
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-from tests.book.ch05.plot_name import newline
+from E_520_plot_name import newline
 
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号

@@ -1,15 +1,16 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-06 13:19
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-06 13:19
 # 《自然语言处理入门》3.3 训练
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
+import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 from jpype import JString
 
 from pyhanlp import *
-from tests.book.ch03.demo_corpus_loader import my_cws_corpus
-from tests.book.ch03.msr import msr_model
-from tests.test_utility import test_data_path
+from book.ch03.E_331_demo_corpus_loader import my_cws_corpus
+from book.ch03.E_322_msr import msr_model
+from test_utility import test_data_path
 
 NatureDictionaryMaker = SafeJClass('com.hankcs.hanlp.corpus.dictionary.NatureDictionaryMaker')
 CorpusLoader = SafeJClass('com.hankcs.hanlp.corpus.document.CorpusLoader')

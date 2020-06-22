@@ -1,9 +1,5 @@
-# -*- coding:utf-8 -*-
-# Author：https://am207.github.io/2017/wiki/gradientdescent.html
-# Date: 2018-06-26 17:15
-# 《自然语言处理入门》6.2.2 条件随机场的训练
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+# -*- coding:utf-8 -*-# Author：https://am207.github.io/2017/wiki/gradientdescent.html# Date: 2018-06-26 17:15
+#《自然语言处理入门》6.2.2 条件随机场的训练
 
 import matplotlib.pyplot as plt
 import numpy as np

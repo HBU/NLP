@@ -1,12 +1,11 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-07-04 17:41
 # 《自然语言处理入门》7.2.1 《人民日报》语料库与 PKU 标注集
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
 import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 
-from tests.test_utility import ensure_data
+from test_utility import ensure_data
 
 PKU98 = ensure_data("pku98", "http://file.hankcs.com/corpus/pku98.zip")
 PKU199801 = os.path.join(PKU98, '199801.txt')

@@ -1,9 +1,5 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-17 11:32
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-17 11:32
 # 《自然语言处理入门》4.4 隐马尔可夫模型的训练
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
 import numpy as np
 from pyhanlp import *
 from jpype import JArray, JFloat, JInt

@@ -1,14 +1,15 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-06 12:51
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-06 12:51
 # 《自然语言处理入门》3.3.1 加载语料库
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import sys
+import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
+
 from pyhanlp import *
-from tests.test_utility import test_data_path
+from test_utility import test_data_path
 
 CorpusLoader = SafeJClass('com.hankcs.hanlp.corpus.document.CorpusLoader')
-
 
 def my_cws_corpus():
     data_root = test_data_path()

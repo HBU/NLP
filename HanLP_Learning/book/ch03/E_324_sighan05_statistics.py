@@ -1,16 +1,15 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-06-05 18:03
+# -*- coding:utf-8 -*-# Author：hankcs# Date: 2018-06-05 18:03
 # 《自然语言处理入门》3.2.4 语料库统计
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
-import re
 from collections import Counter
 
+import sys
 import os
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 
-from tests.test_utility import ensure_data
-
+from test_utility import ensure_data
+import re # Add by David 2020.6.18
 
 def count_corpus(train_path: str, test_path: str):
     train_counter, train_freq, train_chars = count_word_freq(train_path)
@@ -23,7 +22,7 @@ def count_corpus(train_path: str, test_path: str):
 
 def count_word_freq(train_path):
     f = Counter()
-    with open(train_path) as src:
+    with open(train_path,'r', encoding='UTF-8') as src:
         for line in src:
             for word in re.compile("\\s+").split(line.strip()):
                 f[word] += 1

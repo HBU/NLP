@@ -1,9 +1,4 @@
-# -*- coding:utf-8 -*-
-# Author：hankcs
-# Date: 2018-07-05 10:56
 # 《自然语言处理入门》7.3.3 基于条件随机场的词性标注
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
 
 from pyhanlp import *
 from tests.book.ch07.demo_hmm_pos import AbstractLexicalAnalyzer, PerceptronSegmenter
