@@ -4,6 +4,11 @@
 # 《自然语言处理入门》8.2.3 基于规则的数词英文识别
 # 配套书籍：http://nlp.hankcs.com/book.php
 # 讨论答疑：https://bbs.hankcs.com/
+import os
+import sys
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 from pyhanlp import *
 
 from tests.book.ch03.ngram_segment import ViterbiSegment

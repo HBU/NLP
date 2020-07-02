@@ -4,6 +4,11 @@
 # 《自然语言处理入门》8.6 自定义领域命名实体识别
 # 配套书籍：http://nlp.hankcs.com/book.php
 # 讨论答疑：https://bbs.hankcs.com/
+import os
+import sys
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 from tests.book.ch05.perceptron_cws import CWSTrainer
 from tests.book.ch07.demo_hmm_pos import AbstractLexicalAnalyzer, PerceptronSegmenter
 from tests.book.ch07.demo_perceptron_pos import PerceptronPOSTagger

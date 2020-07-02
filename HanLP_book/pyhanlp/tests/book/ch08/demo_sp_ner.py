@@ -2,8 +2,11 @@
 # Author：hankcs
 # Date: 2018-07-29 15:06
 # 《自然语言处理入门》8.5.3 基于感知机序列标注的命名实体识别
-# 配套书籍：http://nlp.hankcs.com/book.php
-# 讨论答疑：https://bbs.hankcs.com/
+import os
+import sys
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
 from pyhanlp import *
 from tests.book.ch07 import pku
 from tests.book.ch08.demo_hmm_ner import test, PerceptronSegmenter, PerceptronPOSTagger

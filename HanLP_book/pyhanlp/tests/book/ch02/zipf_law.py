@@ -5,6 +5,11 @@
 # 配套书籍：http://nlp.hankcs.com/book.php
 # 讨论答疑：https://bbs.hankcs.com/
 import os
+import sys
+# 得到当前根目录
+o_path = os.getcwd() # 返回当前工作目录
+sys.path.append(o_path) # 添加自己指定的搜索路径
+
 from collections import Counter
 
 import numpy as np
@@ -15,7 +20,7 @@ sighan05 = ensure_data('icwb2-data', 'http://sighan.cs.uchicago.edu/bakeoff2005/
 msr = os.path.join(sighan05, 'training', 'msr_training.utf8')
 
 f = Counter()
-with open(msr) as src:
+with open(msr,'r', encoding='UTF-8') as src:
     for line in src:
         line = line.strip()
         for word in line.split('  '):
